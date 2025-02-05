@@ -1,4 +1,4 @@
-import { parseArgs, types } from 'node:util';
+console.log("Hello via Bun!");import { parseArgs, types } from 'node:util';
 import configs, { type Workspace } from './utils/config_setup';
 import { $ } from 'bun';
 

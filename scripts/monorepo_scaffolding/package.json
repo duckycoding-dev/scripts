@@ -1,0 +1,17 @@
+{
+  "name": "@scripts/monorepo_scaffolding",
+  "module": "index.ts",
+  "type": "module",
+  "devDependencies": {
+    "@types/bun": "latest",
+    "@types/figlet": "^1.7.0"
+  },
+  "dependencies": {
+    "figlet": "^1.8.0",
+    "ansis": "^3.9.0",
+    "@scripts/utils": "*"
+  },
+  "peerDependencies": {
+    "typescript": "^5.0.0"
+  }
+}

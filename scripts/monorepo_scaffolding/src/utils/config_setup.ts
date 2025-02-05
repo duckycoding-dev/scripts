@@ -1,5 +1,5 @@
 import { $ } from 'bun';
-import { createFile } from './fs';
+import { createFile } from '@scripts/utils/fs';
 import { appendFileSync } from 'node:fs';
 
 export type Workspace = {

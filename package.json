@@ -1,12 +1,12 @@
 {
-  "name": "cli-templater",
-  "module": "index.ts",
+  "name": "@scripts/root",
+  "author": "DuckyCoding",
   "type": "module",
   "version": "0.0.1",
+  "private": true,
   "devDependencies": {
     "@eslint/js": "^9.19.0",
     "@types/bun": "latest",
-    "@types/figlet": "^1.7.0",
     "eslint": "^9.19.0",
     "eslint-config-prettier": "^10.0.1",
     "globals": "^15.14.0",
@@ -18,19 +18,8 @@
   "peerDependencies": {
     "typescript": "^5.0.0"
   },
-  "dependencies": {
-    "figlet": "^1.8.0",
-    "ansis": "^3.9.0",
-    "npm": "^11.0.0"
-  },
-  "bin": {
-    "cli-templater": "dist/index.js"
-  },
-  "main": "dist/index.js",
-  "scripts": {
-    "dev": "tsc -w",
-    "build": "tsc && bun unlink && bun link",
-    "start": "bun dist/index.js",
-    "prebuild": "bun ./src/scripts/copyDirToDist config_structures"
-  }
+  "workspaces": [
+    "packages/*",
+    "scripts/*"
+  ]
 }
