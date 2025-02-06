@@ -3,12 +3,16 @@
   "compilerOptions": {
     "baseUrl": "./",
     "rootDir": "./src",
-    "outDir": "dist",
+    "outDir": "./dist",
     "declarationDir": "./dist",
-    "paths": {
-      "@/*": ["*"]
+    "composite": true,
+    "paths": {  
+      "@scripts/utils/*": ["./src/*"] // this should match the package name of the referenced package: in the package.json of that package the exports point to the dist folder, but we want to use the src folder in development, thus this path mapping
     }
   },
-  "include": ["./src/**/*", "../../packages/utils/src/fs.ts"],
-  "exclude": ["./dist/**/*", "./node_modules"]
+  "include": ["./src/**/*.ts"],
+  "exclude": ["./dist/**/*", "./node_modules"],
+  "references": [
+    { "path": "../../packages/utils" }
+  ]
 }
