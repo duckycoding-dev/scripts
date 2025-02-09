@@ -21,5 +21,17 @@
   "workspaces": [
     "packages/*",
     "scripts/*"
-  ]
+  ],
+  "scripts": {
+    "clean": "bun run clean:node_modules && bun run clean:dist",
+    "clean:node_modules": "find packages -type d -name 'node_modules' -exec rm -rf {} + && find scripts -type d -name 'node_modules' -exec rm -rf {} +",
+    "clean:dist": "find packages -type d -name 'dist' -exec rm -rf {} + && find scripts -type d -name 'dist' -exec rm -rf {} +",
+    "remove:dist": "rm -rf node_modules **/node_modules",
+    "check:packages": "bun run --parallel --filter ./packages/* check",
+    "check:scripts": "bun run --parallel --filter ./scripts/* check",
+    "build:packages": "bun run --parallel --filter ./packages/* build",
+    "build:scripts": "bun run --parallel --filter ./scripts/* build",
+    "dev:packages": "bun run --parallel --filter ./packages/* dev",
+    "dev:scripts": "bun run --parallel --filter ./scripts/* dev"
+  }
 }

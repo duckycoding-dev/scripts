@@ -6,9 +6,6 @@
     "outDir": "./dist",
     "declarationDir": "./dist",
     "composite": true,
-    "paths": {  
-      "@scripts/utils/*": ["./src/*"] // this should match the package name of the referenced package: in the package.json of that package the exports point to the dist folder, but we want to use the src folder in development, thus this path mapping
-    }
   },
   "include": ["./src/**/*.ts"],
   "exclude": ["./dist/**/*", "./node_modules"],

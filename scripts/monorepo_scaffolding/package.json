@@ -1,6 +1,6 @@
 {
   "name": "@scripts/monorepo_scaffolding",
-  "module": "index.ts",
+  "module": "./src/index.ts",
   "type": "module",
   "devDependencies": {
     "@types/bun": "latest",
@@ -13,5 +13,8 @@
   },
   "peerDependencies": {
     "typescript": "^5.0.0"
-  }
+  },
+  "scripts": {
+    "check": "tsc"
+  } 
 }
